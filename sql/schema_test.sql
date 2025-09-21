@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS loginAPI (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(30) UNIQUE NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    passhashed VARCHAR NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS blacklist(
+    id SERIAL PRIMARY KEY,
+    TOKEN VARCHAR(60) NOT NULL
+)
+
+/*INSERT INTO loginAPI(username,email) VALUES('asd','asd2a@a') ON CONFLICT (email) DO NOTHING;*/
